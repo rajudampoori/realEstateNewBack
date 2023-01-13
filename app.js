@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 // const router = require("./routers/routes")
 const cors = require("cors")
-mongoose.connect("mongodb+srv://root:rootroot@cluster0.ziwx6e8.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://root:root@cluster0.h3tpwio.mongodb.net/?retryWrites=true&w=majority")
 //mongodb://localhost:27017/realestate
 .then(()=> {console.log("connection success")})
 .catch((err)=> console.log(`Something went Wrong: ${err}`))

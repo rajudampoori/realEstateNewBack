@@ -56,8 +56,7 @@ route.post("/api/basicinfo/posts", async (req, res) => {
   // console.log(req.body)
 });
 
-route.post(
-  "/api/basicinfo/propertydetails/generalinfo/posts",
+route.post("/api/basicinfo/propertydetails/generalinfo/posts",
   async (req, res) => {
     try {
       const postData = new General({
@@ -180,10 +179,7 @@ route.post("/searchppdid", async (req, res) => {
 // })
 
 //------code for registration-------------------
-route.post(
-  "/signup",
-
-  async (req, res) => {
+route.post("/signup",async (req, res) => {
     const { email, password, cpassword } = req.body;
 
     if (!email || !password || !cpassword) {
@@ -267,6 +263,7 @@ route.get("/validuser", authenticate, async (req, res) => {
     return res.status(401).json({ status: 401, error });
   }
 });
+
 //logout
 route.get("/logout", authenticate, async (req, res) => {
   try {

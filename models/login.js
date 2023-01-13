@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const keysecret = 'RESTAPI'
+
 const LoginSchema = new mongoose.Schema({
   email: {
     type: String,
@@ -25,6 +26,7 @@ const LoginSchema = new mongoose.Schema({
     }
   ]
 })
+
 // hashing  password
 LoginSchema.pre('save', async function (next) {
   if (this.isModified('password')) {
@@ -40,7 +42,6 @@ LoginSchema.methods.generateAuthtoken = async function () {
     let token23 = jwt.sign({ _id: this._id }, keysecret, {
       expiresIn: '1d'
     })
-
     this.tokens = this.tokens.concat({ token: token23 })
     await this.save()
     return token23

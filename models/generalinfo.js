@@ -1,8 +1,8 @@
 const mongoose = require("mongoose")
 
 const generalSchema = new mongoose.Schema({
-    mobile : {type: String},
-    image : {type: String},
+    mobile : {type: String,required:true},
+    image : {type: String,required : true},
     name : String,
     postedBy : String,
     saleType : String,

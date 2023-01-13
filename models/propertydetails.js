@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const propertiesSchema = new mongoose.Schema({
     length : Number,
-    totalArea : {type: Number},
+    totalArea : {type: Number,required:true},
     noOfBHK :Number,
     attached : String,
     furnished:String,

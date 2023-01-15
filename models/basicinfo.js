@@ -12,4 +12,3 @@ const basicSchema = new mongoose.Schema({
 })
 
 const Basics = mongoose.model('Basics',basicSchema)
-// exports.model = Basics;

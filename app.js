@@ -1,14 +1,12 @@
 const mongoose = require("mongoose");
 const express = require("express");
-// const router = require("./routers/routes")
 const cors = require("cors")
+
 mongoose.connect("mongodb+srv://root:root@cluster0.h3tpwio.mongodb.net/?retryWrites=true&w=majority")
-//mongodb://localhost:27017/realestate
 .then(()=> {console.log("connection success")})
 .catch((err)=> console.log(`Something went Wrong: ${err}`))
 
 const app = express();
-// app.use("/",router)
 app.use(cors())
 const port = process.env.PORT || 8000
 require('./models/basicinfo')

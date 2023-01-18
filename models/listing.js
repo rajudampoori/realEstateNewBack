@@ -1,5 +1,4 @@
 const mongoose = require("mongoose")
-
 const estateSchema = new mongoose.Schema({
     ppdid:String,
     image : String ,
@@ -9,5 +8,5 @@ const estateSchema = new mongoose.Schema({
     views : Number,
     daysleft : Number,
 },{timestamps:true})
-
-mongoose.model('Estate',estateSchema)
+const Listings = mongoose.model('Estate',estateSchema)
+module.exports = Listings;

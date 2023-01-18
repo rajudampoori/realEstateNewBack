@@ -20,3 +20,5 @@ const propertiesSchema = new mongoose.Schema({
 })
 
 const Properties = mongoose.model('Properties',propertiesSchema)
+// exports.model = Properties;
+module.exports = Properties;

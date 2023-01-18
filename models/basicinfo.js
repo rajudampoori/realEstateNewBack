@@ -1,5 +1,4 @@
 const mongoose = require("mongoose")
-
 const basicSchema = new mongoose.Schema({
     propertyType : {type: String,required:true},
     negotable : String,
@@ -10,5 +9,5 @@ const basicSchema = new mongoose.Schema({
     propertyDescription :String,
     bankLoan: String
 })
-
 const Basics = mongoose.model('Basics',basicSchema)
+module.exports = Basics

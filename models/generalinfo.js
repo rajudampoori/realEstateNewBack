@@ -1,5 +1,4 @@
 const mongoose = require("mongoose")
-
 const generalSchema = new mongoose.Schema({
     mobile : {type: String,required:true},
     image : {type: String,required : true},
@@ -9,5 +8,5 @@ const generalSchema = new mongoose.Schema({
     featuredPackage:String,
     PPDPackage : String
 })
-
 const General = mongoose.model('General',generalSchema)
+module.exports = General

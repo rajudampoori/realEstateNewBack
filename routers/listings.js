@@ -1,7 +1,6 @@
 const express = require("express");
 const bodyparser = require("body-parser");
 const listingroute = express.Router();
-const route = require("../routers/routes")
 listingroute.use(bodyparser())
 const Estate = require("../models/listing")
 

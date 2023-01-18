@@ -7,7 +7,6 @@ const authenticate = require("../middleware/authenticate");
 const route = require("../routers/routes")
 validroute.use(bodyparser())
 
-
 validroute.get("/validuser", authenticate, async (req, res) => {
     try {
         console.log("i am here")

@@ -1,7 +1,5 @@
-
 var bcrypt = require("bcryptjs");
-
-const cors = require("cors")
+// const cors = require("cors")
 const express = require("express");
 const Login = require("../models/login");
 const bodyparser = require("body-parser");
@@ -9,7 +7,7 @@ const loginroute = express.Router();
 
 loginroute.use(express.json());
 loginroute.use(express.urlencoded({ extended: false }));
-loginroute.use(cors());
+// loginroute.use(cors());
 loginroute.use(bodyparser())
 
 
@@ -41,6 +39,5 @@ loginroute.post("/login", async (req, res) => {
        res.json({ message: "User do not exist ,Please Signup" });
     }
   });
-
 
   module.exports = loginroute;
